@@ -1,0 +1,21 @@
+{
+  "name": "runit-database",
+  "version": "1.0.0",
+  "description": "Nodejs module for managing database on the runit serverless platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "\"serverless",
+    "runit",
+    "runit-database",
+    "database",
+    "cloud",
+    "nosql",
+    "mongodb",
+    "mysql\""
+  ],
+  "author": "Amos Amissah",
+  "license": "MIT"
+}
