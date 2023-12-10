@@ -82,6 +82,7 @@ class DocumentObject {
       const document_api = `${DocumentObject.REQUEST_API}${collection}/`;
       const data = {
         function: 'all',
+        _filter: {},
         projection,
       };
 
@@ -100,7 +101,7 @@ class DocumentObject {
       collection = collection || DocumentObject.COLLECTION;
       const document_api = `${DocumentObject.REQUEST_API}${collection}/`;
       const data = {
-        function: 'find',
+        function: 'find_one',
         _filter,
         projection,
       };
@@ -120,7 +121,7 @@ class DocumentObject {
       collection = collection || DocumentObject.COLLECTION;
       const documentApi = DocumentObject.REQUEST_API + collection + '/';
       const data = {};
-      data.function = 'all';
+      data.function = 'find';
       data._filter = _filter;
       data.projection = projection;
 
@@ -159,8 +160,8 @@ class DocumentObject {
       const documentApi = `${DocumentObject.REQUEST_API}${collection}/`;
 
       const data = {};
-      data.function = 'insert';
-      data.document = document;
+      data.function = 'insert_many';
+      data.documents = documents;
 
       const req = await axios.post(documentApi, data, {
         headers: DocumentObject.HEADERS,
